@@ -2,7 +2,7 @@
 <details>
 <summary><strong>Week0 - Tools Installation</strong></summary>
 
-###Yosys
+### Yosys Installation
 ```
 $ git clone https://github.com/YosysHQ/yosys.git
 $ cd yosys 
@@ -14,5 +14,6 @@ $ sudo apt-get install build-essential clang bison flex \
 $ make 
 $ sudo make install
 ```
+
 
 </details>
