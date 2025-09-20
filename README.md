@@ -2,7 +2,9 @@
 <details>
 <summary><strong>Week0 - Tools Installation</strong></summary>
 
-### Yosys Installation
+---
+    
+### 1. Yosys Installation
 ```
 $ git clone https://github.com/YosysHQ/yosys.git
 $ cd yosys 
@@ -16,22 +18,67 @@ $ sudo make install
 ```
 <img width="1920" height="1080" alt="Screenshot from 2025-09-20 13-46-18" src="https://github.com/user-attachments/assets/7011b588-b732-4acb-8e85-19fcfec18e85" />
 
-### Iverilog
+---
+***
+
+### 2. Iverilog
 
 ```
 $ sudo apt-get install iverilog
 ```
 <img width="1920" height="1080" alt="Screenshot from 2025-09-20 14-08-04" src="https://github.com/user-attachments/assets/c8f656ad-aefc-405a-989c-8e554f7795ff" />
 
+***
+---
 
-### GTKWave
+### 3. GTKWave
 ```
 $ sudo apt update
 $ sudo apt install gtkwave
 ```
 <img width="1920" height="1080" alt="Screenshot from 2025-09-20 14-14-41" src="https://github.com/user-attachments/assets/4b9eab4c-2880-442a-b614-ce829813c7ef" />
 
+---
+***
 
+### 4. Ngspice 
 
+```
+$ sudo apt update
+$ sudo apt install ngspice
+```
+<img width="1920" height="1080" alt="Screenshot from 2025-09-20 17-23-36" src="https://github.com/user-attachments/assets/199fee54-344e-4421-a951-2269e95398f0" />
+
+---
+***
+
+### 5. Magic vlsi
+```
+# Install required dependencies
+sudo apt-get install m4
+sudo apt-get install tcsh
+sudo apt-get install csh
+sudo apt-get install libx11-dev
+sudo apt-get install tcl-dev tk-dev
+sudo apt-get install libcairo2-dev
+sudo apt-get install mesa-common-dev libglu1-mesa-dev
+sudo apt-get install libncurses-dev
+
+# Clone Magic repository
+git clone https://github.com/RTimothyEdwards/magic
+cd magic
+
+# Configure build
+./configure
+
+# Build Magic
+make
+
+# Install system-wide
+sudo make install
+```
+<img width="1920" height="1080" alt="Screenshot from 2025-09-20 17-29-23" src="https://github.com/user-attachments/assets/d9cf5be0-dc8e-4a48-9df4-fbe4efc29a87" />
+
+******
 
 </details>
