@@ -14,7 +14,8 @@ $ sudo apt-get install build-essential clang bison flex \
 $ make 
 $ sudo make install
 ```
-![image](/home/aadarsh/Pictures/Screenshots/-Screenshot from 2025-09-20 13-46-18.png)
+<img width="1920" height="1080" alt="Screenshot from 2025-09-20 13-46-18" src="https://github.com/user-attachments/assets/7011b588-b732-4acb-8e85-19fcfec18e85" />
+
 
 
 </details>
