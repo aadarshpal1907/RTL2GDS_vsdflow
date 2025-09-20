@@ -16,6 +16,22 @@ $ sudo make install
 ```
 <img width="1920" height="1080" alt="Screenshot from 2025-09-20 13-46-18" src="https://github.com/user-attachments/assets/7011b588-b732-4acb-8e85-19fcfec18e85" />
 
+### Iverilog
+
+```
+$ sudo apt-get install iverilog
+```
+<img width="1920" height="1080" alt="Screenshot from 2025-09-20 14-08-04" src="https://github.com/user-attachments/assets/c8f656ad-aefc-405a-989c-8e554f7795ff" />
+
+
+### GTKWave
+```
+$ sudo apt update
+$ sudo apt install gtkwave
+```
+<img width="1920" height="1080" alt="Screenshot from 2025-09-20 14-14-41" src="https://github.com/user-attachments/assets/4b9eab4c-2880-442a-b614-ce829813c7ef" />
+
+
 
 
 </details>
