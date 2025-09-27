@@ -104,13 +104,21 @@ sudo make install
 ### RTL design and synthesis 
 
 <p align="center">
-<img width="1920" height="1080" alt="Screenshot from 2025-09-27 21-06-36" src="https://github.com/user-attachments/assets/f2415e3b-c4bc-40b2-b9ec-2eac7802374f" />
-<b>iverilog & gtkwave implimentation </b>
+<img width="1920" height="1080" alt="Screenshot from 2025-09-27 20-45-52" src="https://github.com/user-attachments/assets/e6532707-b67f-4eb0-beea-456eca1dcdd1" />
+<b> Netlist for Yosys </b>
 </p>
 
 ***
 
-    
+<p align="center">
+<img width="1920" height="1080" alt="Screenshot from 2025-09-27 21-06-36" src="https://github.com/user-attachments/assets/f2415e3b-c4bc-40b2-b9ec-2eac7802374f" />
+<b>iverilog & gtkwave implimentation  
+  example 2x1 mux o/p wave  </b>
+</p>
+
+***
+
+
 </details>
 
 
