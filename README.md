@@ -258,11 +258,21 @@ cd output/post_synth_sim
 
    - Module Redefinition: If you encounter redefinition errors, ensure modules are included only once, either in the testbench or in the command line.
    - Path Issues: Verify paths specified with -I are correct. Use full paths if relative paths cause errors.
+
+## Yosys final report
+<img width="1920" height="1080" alt="Screenshot from 2025-10-10 17-00-30" src="https://github.com/user-attachments/assets/885545e5-e6f2-4e11-8545-b1a1c9c70733" />
+
+
   
 </details>
 
 <details> <summary><strong> Week3 </strong></summary>
 
+### Gate-Level Simulation (GLS) Note
+
+Gate-Level Simulation (GLS) is performed after synthesis to verify the logical correctness of the synthesized netlist. The waveform obtained from GLS is compared with the functional simulation waveform (pre-synthesis). If both outputs match, it confirms that the synthesis process has not introduced any functional errors.
+
+Hence, GLS waveform outputs = Functional simulation outputs, validating that the design’s behavior remains consistent before and after synthesis.
 
 
 </details>
