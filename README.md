@@ -233,7 +233,7 @@ iverilog -o output/pre_synth_sim/pre_synth_sim.out -DPRE_SYNTH_SIM \
 cd output/pre_synth_sim
 ./pre_synth_sim.out
 ```
-![WhatsApp Image 2024-11-05 at 18 21 53](https://github.com/user-attachments/assets/71e2f05c-1688-4016-adf2-3ae8a874b18a)
+<img width="1920" height="1080" alt="Screenshot from 2025-10-10 17-07-07" src="https://github.com/user-attachments/assets/3b720326-6576-44c8-a089-ed015f61cf4a" />
 
 
 **Explanation:**
@@ -258,15 +258,14 @@ cd output/post_synth_sim
 
    - Module Redefinition: If you encounter redefinition errors, ensure modules are included only once, either in the testbench or in the command line.
    - Path Issues: Verify paths specified with -I are correct. Use full paths if relative paths cause errors.
-
-
-
-
-
-
   
 </details>
 
+<details> <summary><strong> Week3 </strong></summary>
+
+
+
+</details>
 
 
 
