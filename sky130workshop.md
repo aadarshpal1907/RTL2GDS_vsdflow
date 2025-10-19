@@ -1,4 +1,4 @@
-<detail>
+<details> 
 
 In MOSFET device characterization, multiple experiments are conducted to understand its electrical behavior under different operating conditions. Each experiment provides insight into specific physical parameters and performance characteristics that are crucial for circuit design.
 
@@ -77,5 +77,24 @@ To evaluate charging/discharging time in digital circuits.
 
 To analyze delay, speed, and AC performance.
 
-</detail>
+</details>
+
+
+
+<img width="1920" height="1080" alt="Screenshot from 2025-10-19 00-17-36" src="https://github.com/user-attachments/assets/c590c399-7d27-4088-b031-ed50c414c94c" />
+
+***
+
+<img width="1920" height="1080" alt="Screenshot from 2025-10-19 00-29-07" src="https://github.com/user-attachments/assets/6347dedf-8e8c-49b0-918d-a9768ba83b8b" />
+
+***
+
+<img width="1920" height="1080" alt="Screenshot from 2025-10-19 00-41-26" src="https://github.com/user-attachments/assets/6750f9e1-c0d2-44e3-bce8-368ca98da4dd" />
+<img width="1920" height="1080" alt="Screenshot from 2025-10-19 00-48-26" src="https://github.com/user-attachments/assets/bcbf885a-2985-44ba-b049-04229116a785" />
+
+***
+<img width="1920" height="1080" alt="Screenshot from 2025-10-19 00-50-36" src="https://github.com/user-attachments/assets/d7f9784c-7033-4cfe-878c-3090404991f0" />
+
+
+
 
