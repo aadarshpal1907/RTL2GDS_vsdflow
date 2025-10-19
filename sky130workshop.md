@@ -95,6 +95,13 @@ To analyze delay, speed, and AC performance.
 ***
 <img width="1920" height="1080" alt="Screenshot from 2025-10-19 00-50-36" src="https://github.com/user-attachments/assets/d7f9784c-7033-4cfe-878c-3090404991f0" />
 
+***
+noise margin
+
+<img width="227" height="222" alt="image" src="https://github.com/user-attachments/assets/77ebeec7-1a7f-4b7b-9578-991350993352" />
+
+<img width="1920" height="1080" alt="Screenshot from 2025-10-19 20-33-28" src="https://github.com/user-attachments/assets/28d83b4c-3bd6-4f6b-a6dd-a62b1b378a4a" />
+
 
 
 
