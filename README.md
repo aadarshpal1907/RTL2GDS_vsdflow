@@ -268,12 +268,100 @@ cd output/post_synth_sim
 
 <details> <summary><strong> Week3 </strong></summary>
 
-### Gate-Level Simulation (GLS) Note
+# GLS OF BABYSOC
+## POST-SYNTHESIS SIMULATION
 
-Gate-Level Simulation (GLS) is performed after synthesis to verify the logical correctness of the synthesized netlist. The waveform obtained from GLS is compared with the functional simulation waveform (pre-synthesis). If both outputs match, it confirms that the synthesis process has not introduced any functional errors.
+### Purpose of GLS:
+Gate-Level Simulation is used to verify the functionality of a design after the synthesis process. Unlike behavioral or RTL (Register Transfer Level) simulations, which are performed at a higher level of abstraction, GLS works on the netlist generated post-synthesis. This netlist includes the actual gates and connections used to implement the design.
 
-Hence, GLS waveform outputs = Functional simulation outputs, validating that the design’s behavior remains consistent before and after synthesis.
+### Key Aspects of GLS for BabySoC:
+1. **Verification with Timing Information:**
+   - GLS is performed using Standard Delay Format (SDF) files to ensure timing correctness.
+   - This checks if the SoC behaves as expected under real-world timing constraints.
 
+2. **Design Validation Post-Synthesis:**
+   - Confirms that the design's logical behavior remains correct after mapping it to the gate-level representation.
+   - Ensures that the design is free from issues like metastability or glitches.
+
+3. **Simulation Tools:**
+   - Tools like Icarus Verilog or a similar simulator can be used for compiling and running the gate-level netlist.
+   - Waveforms are typically analyzed using GTKWave.
+
+4. **Importance for BabySoC:**
+   - BabySoC consists of multiple modules like the RISC-V processor, PLL, and DAC. GLS ensures that these modules interact correctly and meet the timing requirements in the synthesized design.
+
+
+Here is the step-by-step execution plan for running the  commands manually:
+---
+### **Step 1: Load the Top-Level Design and Supporting Modules**
+```bash
+yosys
+```
+
+Inside the Yosys shell, run:
+```yosys
+read_verilog /home/aadarsh/VSDBabySoC/src/module/vsdbabysoc.v
+read_verilog -I /home/aadarsh/VSDBabySoC/src/include /home/ananya123/VSDBabySoCC/src/module/rvmyth.v
+read_verilog -I /home/aadarsh/VSDBabySoC/src/include /home/ananya123/VSDBabySoCC/src/module/clk_gate.v
+
+```
+<img width="1920" height="1080" alt="Screenshot from 2025-10-13 20-05-36" src="https://github.com/user-attachments/assets/bf116938-1ca6-4b98-975f-2def17c85dfd" />
+
+### **Step 2: Load the Liberty Files for Synthesis**
+Inside the same Yosys shell, run:
+```yosys
+read_liberty -lib /home/aadarsh/VSDBabySoC/src/lib/avsdpll.lib
+read_liberty -lib /home/aadarsh/VSDBabySoC/src/lib/avsddac.lib
+read_liberty -lib /home/aadarsh/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
+<img width="1215" height="377" alt="Screenshot from 2025-10-13 20-07-40" src="https://github.com/user-attachments/assets/97ea1cd7-617a-423f-ac61-033710300cc0" />
+
+---
+
+### **Step 3: Run Synthesis Targeting `vsdbabysoc`**
+```yosys
+synth -top vsdbabysoc
+```
+<img width="1920" height="1080" alt="Screenshot from 2025-10-13 20-09-43" src="https://github.com/user-attachments/assets/b237be12-bb00-46f9-8c2c-1802e2c03ce0" />
+<img width="1914" height="510" alt="Screenshot from 2025-10-13 20-10-12" src="https://github.com/user-attachments/assets/4d327783-8765-42be-8ca9-4c709d95ace6" />
+
+---
+
+### **Step 4: Map D Flip-Flops to Standard Cells**
+```yosys
+dfflibmap -liberty /home/aadarsh/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
+<img width="1138" height="647" alt="Screenshot from 2025-10-13 20-12-05" src="https://github.com/user-attachments/assets/b1527035-f71b-4e00-9e2f-55182aede59d" /> 
+
+---
+
+### **Step 5: Perform Optimization and Technology Mapping**
+```yosys
+opt
+```
+<img width="1920" height="1080" alt="Screenshot from 2025-10-13 20-13-19" src="https://github.com/user-attachments/assets/2f095e01-68f2-426b-b29e-b76ed50dc53d" />
+
+---
+
+
+
+### **Step 6: Check Statistics**
+```yosys
+stat
+```
+![WhatsApp Image 2024-11-16 at 5 20 23 AM (3)](https://github.com/user-attachments/assets/292c9093-9a6d-417e-b094-0b8a6e27e7c3)
+![WhatsApp Image 2024-11-16 at 5 20 23 AM (2)](https://github.com/user-attachments/assets/ce8ad45b-92ae-4cc8-a4dd-0f52028e078e)
+![WhatsApp Image 2024-11-16 at 5 20 23 AM (1)](https://github.com/user-attachments/assets/e1741767-2b83-4d88-909e-e5d4c73411f4)
+
+---
+
+### **Step 7: Write the Synthesized Netlist** 
+```yosys
+write_verilog -noattr /home/aadarsh/VSDBabySoC/output/post_synth_sim/vsdbabysoc.synth.v
+```
+![WhatsApp Image 2024-11-16 at 5 20 23 AM](https://github.com/user-attachments/assets/1e0444b4-ad66-4798-b7f7-7bc1e13cf88a)
+
+---
 
 </details>
 
